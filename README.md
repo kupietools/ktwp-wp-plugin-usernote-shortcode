@@ -1,6 +1,8 @@
 # KTWP Usernote Shortcode
 
-A simple WordPress plugin that displays enclosed shortcode content only to specific logged-in users or roles.
+A simple WordPress plugin that displays enclosed shortcode content only to specific logged-in users or roles. Alpha release. 
+
+The principal idea is for a content author to be able to leave themselves or other logged-in users inline comments right on WordPress content which will not be visible to others.
 
 ## Description
 
@@ -26,8 +28,8 @@ Only logged-in users can ever see the content. Logged-out visitors see nothing.
 
 ## Requirements
 
-- **WordPress:** 2.5+
-- **PHP:** 5.3+
+- **WordPress:** 5.6+
+- **PHP:** 7.4+
 
 ## Installation
 

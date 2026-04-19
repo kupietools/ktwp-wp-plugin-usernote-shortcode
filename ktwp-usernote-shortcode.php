@@ -2,7 +2,7 @@
 /*
  * Plugin Name:       KupieTools Usernote Shortcode
  * Plugin URI:        https://michaelkupietz.com/plugins/ktwp-usernote-shortcode/
- * Description:       Display WordPress content within posts or pages only to specific users or roles.
+ * Description:       Display inline WordPress content within posts or pages only to specific users or roles.
  * Version:           1.0.0 alpha
  * Author:            Michael Kupietz
  * Requires at least: 5.2
@@ -17,7 +17,7 @@
  */
 
 /* To-dos:
- * Add admin panel in Kupietools settings page.
+ * Add admin panel in Kupietools settings page for settings and get rid of hard-coded plugin defaults here.
  */
 
 if (!defined('ABSPATH')) {
@@ -204,7 +204,7 @@ function show_to_shortcode($atts, $content = null) {
     $role_match = show_to_user_matches_roles($current_user, $roles);
 
     if ($user_match || $role_match) {
-        return '<div class="ktwp_usernote"><span class="ktwp_usernote_title">Usernote:</span>'.do_shortcode($content).'</div>';
+        return '<span class="ktwp_usernote"><span class="ktwp_usernote_title">Usernote:</span> '.do_shortcode($content).'</span>';
     }
 
     return '';
